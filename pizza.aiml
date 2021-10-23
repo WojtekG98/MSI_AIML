@@ -1,0 +1,19 @@
+<aiml version = "1.0.1" encoding = "UTF-8">
+     <category>
+        <pattern>* PIZZE</pattern>
+            <template>
+                chcesz pizze?
+                <think><set name="topic">PIZZA</set></think>
+            </template>
+    </category>
+    <topic name="PIZZA">
+        <category>
+            <pattern>TAK</pattern>
+            <template>Świetnie! A jaki rozmiar?</template>
+        </category>
+        <category>
+            <pattern>NIE</pattern>
+            <template>To nie</template>
+        </category>
+    </topic>
+</aiml>
