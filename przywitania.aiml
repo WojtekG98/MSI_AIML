@@ -1,6 +1,64 @@
 <aiml version = "1.0.1" encoding = "UTF-8">
     <category>
         <pattern>DZIEN DOBRY</pattern>
-        <template>Dzien dobry, pizzeria, prosze zlozyc zamowienie</template>
+        <template>
+            <random>
+                <li> Dzien dobry! </li>
+                <li> Czesc! </li>
+                <li> Witamy! </li>
+                <li> Hej! </li>
+            </random>
+            Masz dzis ochote na pizze z miesem?
+            <think><set name="topic">RODZAJPIZZA</set></think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>DZIEN DOBRY *</pattern>
+        <template>
+            <srai>DZIEN DOBRY</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>HEJ</pattern>
+        <template>
+            <srai>DZIEN DOBRY</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>HEJ *</pattern>
+        <template>
+            <srai>DZIEN DOBRY</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>CZESC</pattern>
+        <template>
+            <srai>DZIEN DOBRY</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>CZESC *</pattern>
+        <template>
+            <srai>DZIEN DOBRY</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>WITAM</pattern>
+        <template>
+            <srai>DZIEN DOBRY</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>WITAM *</pattern>
+        <template>
+            <srai>DZIEN DOBRY</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ hej *</pattern>
+        <template>
+        Nie rozumiem :( Sprobuj inaczej!
+        </template>
     </category>
 </aiml>

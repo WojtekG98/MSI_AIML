@@ -1,0 +1,104 @@
+<aiml version = "1.0.1" encoding = "UTF-8">
+    <topic name="BEZMIESA">
+        <category>
+            <pattern>WYBORODP</pattern>
+            <template>
+                <random>
+                    <li> Swietnie! </li>
+                    <li> Dobry wybor! </li>
+                    <li> Pysznie! </li>
+                    <li> Swietny wybor! </li>
+                </random>
+                Do wyboru mamy trzy rozmiary pizzy: duza, srednia i mala. Jaka wybierasz?
+                <think><set name="topic">ROZMIARPIZZY</set></think>
+            </template>
+        </category>
+        <category>
+            <pattern>MARGHERITA</pattern>
+            <template>
+                <think>
+                    <set name = "zamowienie_nazwa">Margherita</set>
+                </think>
+                <srai>WYBORODP</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ MARGHERITA</pattern>
+            <template>
+                <srai>MARGHERITA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>MARGHERITA *</pattern>
+            <template>
+                <srai>MARGHERITA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ MARGHERITA *</pattern>
+            <template>
+                <srai>MARGHERITA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>MARINARA</pattern>
+            <template>
+                <think>
+                    <set name = "zamowienie_nazwa">Marinara</set>
+                </think>
+                <srai>WYBORODP</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ MARINARA</pattern>
+            <template>
+                <srai>MARINARA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>MARINARA *</pattern>
+            <template>
+                <srai>MARINARA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ MARINARA *</pattern>
+            <template>
+                <srai>MARINARA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>VEGETARIANA</pattern>
+            <template>
+                <think>
+                    <set name = "zamowienie_nazwa">Vegetariana</set>
+                </think>
+                <srai>WYBORODP</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ VEGETARIANA</pattern>
+            <template>
+                <srai>VEGETARIANA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>VEGETARIANA *</pattern>
+            <template>
+                <srai>VEGETARIANA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ VEGETARIANA *</pattern>
+            <template>
+                <srai>VEGETARIANA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>*</pattern>
+            <template>
+                Nie robimy pizzy "<star index = "1"/>", wybierz jedna z naszego menu!
+            </template>
+        </category>
+    </topic>
+</aiml>

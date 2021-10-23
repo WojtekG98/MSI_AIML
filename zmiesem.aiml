@@ -1,0 +1,104 @@
+<aiml version = "1.0.1" encoding = "UTF-8">
+    <topic name="ZMIESEM">
+        <category>
+            <pattern>WYBORODP</pattern>
+            <template>
+                <random>
+                    <li> Swietnie! </li>
+                    <li> Dobry wybor! </li>
+                    <li> Pysznie! </li>
+                    <li> Swietny wybor! </li>
+                </random>
+                Do wyboru mamy trzy rozmiary pizzy: duza, srednia i mala. Jaka wybierasz?
+                <think><set name="topic">ROZMIARPIZZY</set></think>
+            </template>
+        </category>
+        <category>
+            <pattern>CAPRICCIOSA</pattern>
+            <template>
+                <think>
+                    <set name = "zamowienie_nazwa">Capricciosa</set>
+                </think>
+                <srai>WYBORODP</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ CAPRICCIOSA</pattern>
+            <template>
+                <srai>CAPRICCIOSA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>CAPRICCIOSA *</pattern>
+            <template>
+                <srai>CAPRICCIOSA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ CAPRICCIOSA *</pattern>
+            <template>
+                <srai>CAPRICCIOSA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>DIAVOLA</pattern>
+            <template>
+                <think>
+                    <set name = "zamowienie_nazwa">Diavola</set>
+                </think>
+                <srai>WYBORODP</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ DIAVOLA</pattern>
+            <template>
+                <srai>DIAVOLA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>DIAVOLA *</pattern>
+            <template>
+                <srai>DIAVOLA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ DIAVOLA *</pattern>
+            <template>
+                <srai>DIAVOLA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>PROSCIUTTO</pattern>
+            <template>
+                <think>
+                    <set name = "zamowienie_nazwa">Prosciutto</set>
+                </think>
+                <srai>WYBORODP</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ PROSCIUTTO</pattern>
+            <template>
+                <srai>PROSCIUTTO</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>PROSCIUTTO *</pattern>
+            <template>
+                <srai>PROSCIUTTO</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ PROSCIUTTO *</pattern>
+            <template>
+                <srai>PROSCIUTTO</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>*</pattern>
+            <template>
+                Nie robimy pizzy "<star index = "1"/>", wybierz jedna z naszego menu!
+            </template>
+        </category>
+    </topic>
+</aiml>

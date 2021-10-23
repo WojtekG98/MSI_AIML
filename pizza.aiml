@@ -1,19 +1,126 @@
 <aiml version = "1.0.1" encoding = "UTF-8">
-     <category>
-        <pattern>* PIZZE</pattern>
-            <template>
-                chcesz pizze?
-                <think><set name="topic">PIZZA</set></think>
-            </template>
-    </category>
-    <topic name="PIZZA">
-        <category>
-            <pattern>TAK</pattern>
-            <template>Świetnie! A jaki rozmiar?</template>
-        </category>
+
+    <topic name="RODZAJPIZZA">
         <category>
             <pattern>NIE</pattern>
-            <template>To nie</template>
+            <template>
+                Swietnie! W naszym menu bez misa mamy do wyboru: Margherita, Marinara i Vegetariana
+                <think>
+                    <set name="topic">BEZMIESA</set>
+                </think>
+            </template>
+        </category>
+        <category>
+            <pattern>TAK</pattern>
+            <template>
+                Super, z miesem do wyboru mamy: Capricciosa, Diavola oraz Prosciutto
+                <think>
+                    <set name="topic">ZMIESEM</set>
+                </think>
+            </template>
+        </category>
+        <category>
+            <pattern>*</pattern>
+            <template>
+                Nie rozumiem... Masz dzisiaj ochote na pizze z miesem?
+                <think><set name="topic">RODZAJPIZZA</set></think>
+            </template>
+        </category>
+    </topic>
+
+    <topic name="ROZMIARPIZZY">
+        <category>
+            <pattern>DUZA</pattern>
+            <template>
+                To będzie 34.99 PLN za duza pizze <get name = "zamowienie_nazwa"></get>. Czy to wszystko?
+                <think>
+                    <set name="topic">COSJESZCZE</set>
+                    <set name="zamowienie_rozmiar_cena">34.99 PLN za duza pizze</set>
+                    <set name="ostatniezamowienie"><get name="zamowienie_rozmiar_cena"></get> <get name = "zamowienie_nazwa"></get></set>
+                </think>
+            </template>
+        </category>
+        <category>
+            <pattern>_ DUZA</pattern>
+            <template>
+                <srai>DUZA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ DUZA *</pattern>
+            <template>
+                <srai>DUZA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>DUZA *</pattern>
+            <template>
+                <srai>DUZA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>SREDNIA</pattern>
+            <template>
+                To będzie 29.99 PLN za srednia pizze <get name = "zamowienie_nazwa"></get>. Czy to wszystko?
+                <think>
+                    <set name="topic">COSJESZCZE</set>
+                    <set name="zamowienie_rozmiar_cena">29.99 PLN za srednia pizze </set>
+                    <set name="ostatniezamowienie"><get name="zamowienie_rozmiar_cena"></get> <get name = "zamowienie_nazwa"></get></set>
+                </think>
+            </template>
+        </category>
+        <category>
+            <pattern>_ SREDNIA</pattern>
+            <template>
+                <srai>SREDNIA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ SREDNIA *</pattern>
+            <template>
+                <srai>SREDNIA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>SREDNIA *</pattern>
+            <template>
+                <srai>SREDNIA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>MALA</pattern>
+            <template>
+                To będzie 24.99 PLN za mala pizze <get name = "zamowienie_nazwa"></get>. Czy to wszystko?
+                <think>
+                    <set name="topic">COSJESZCZE</set>
+                    <set name="zamowienie_rozmiar_cena">24.99 PLN za mala pizze</set>
+                    <set name="ostatniezamowienie"><get name="zamowienie_rozmiar_cena"></get> <get name = "zamowienie_nazwa"></get></set>
+                </think>
+            </template>
+        </category>
+        <category>
+            <pattern>_ MALA</pattern>
+            <template>
+                <srai>MALA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ MALA *</pattern>
+            <template>
+                <srai>MALA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>MALA *</pattern>
+            <template>
+                <srai>MALA</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>*</pattern>
+            <template>
+                Chyba nie mamy takiego rozmiaru... Bedzie mala, srednia czy duza?
+            </template>
         </category>
     </topic>
 </aiml>
