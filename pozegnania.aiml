@@ -5,4 +5,22 @@
             Do widzenia!
         </template>
     </category>
+    <category>
+        <pattern>DO WIDZENIA *</pattern>
+        <template>
+            <srai>DO WIDZENIA</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ DO WIDZENIA</pattern>
+        <template>
+            <srai>DO WIDZENIA</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ DO WIDZENIA *</pattern>
+        <template>
+            <srai>DO WIDZENIA</srai>
+        </template>
+    </category>
 </aiml>
