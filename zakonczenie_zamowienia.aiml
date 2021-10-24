@@ -11,14 +11,55 @@
             </template>
         </category>
         <category>
+            <pattern>TAK *</pattern>
+            <template>
+                <srai>TAK</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ TAK *</pattern>
+            <template>
+                <srai>TAK</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ TAK</pattern>
+            <template>
+                <srai>TAK</srai>
+            </template>
+        </category>
+        <category>
             <pattern>NIE</pattern>
             <template>
-                Kolejna pizza?
-                Z miesem?
+                <random>
+                    <li>Kolejna? Bez problemu!</li>
+                    <li>Wiekszy glod?</li>
+                    <li>Oczywscie!</li>
+                    <li>Nie ma problemu!</li>
+                </random>
+                Bedzie pizza z miesem?
                 <think>
                     <set name="topic">RODZAJPIZZA</set>
-                    <set name = "calezamowienie"> <get name = "calezamowienie"></get><get name="ostatniezamowienie"></get>,</set>
+                    <set name = "calezamowienie"><get name = "calezamowienie"></get><get name="ostatniezamowienie"></get>, </set>
                 </think>
+            </template>
+        </category>
+        <category>
+            <pattern>NIE *</pattern>
+            <template>
+                <srai>NIE</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ NIE *</pattern>
+            <template>
+                <srai>NIE</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ NIE</pattern>
+            <template>
+                <srai>NIE</srai>
             </template>
         </category>
     </topic>
@@ -27,14 +68,19 @@
         <category>
             <pattern>*</pattern>
             <template>
-                Zamowienie skladajace sie z:<get name = "calezamowienie"></get> zostanie dostarczone na adres "<star index = "1"/>" za okolo
+                Zamowienie skladajace sie z:<get name = "calezamowienie"></get>zostanie dostarczone na adres "<star index = "1"/>" za okolo
                 <random>
                     <li>60 min.</li>
+                    <li>55 min.</li>
                     <li>50 min.</li>
+                    <li>45 min.</li>
                     <li>40 min.</li>
+                    <li>35 min.</li>
                     <li>30 min.</li>
+                    <li>25 min.</li>
                     <li>20 min.</li>
                     <li>15 min.</li>
+                    <li>10 min.</li>
                 </random>
                 Dziekuje za zlozenie zamowienia i zapraszam do ponownego kontaktu!
                 <srai>DO WIDZENIA</srai>

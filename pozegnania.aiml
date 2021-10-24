@@ -23,4 +23,16 @@
             <srai>DO WIDZENIA</srai>
         </template>
     </category>
+    <category>
+        <pattern>NARA</pattern>
+        <template>
+            <srai>DO WIDZENIA</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>PA</pattern>
+        <template>
+            <srai>DO WIDZENIA</srai>
+        </template>
+    </category>
 </aiml>

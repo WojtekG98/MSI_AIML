@@ -4,19 +4,67 @@
         <category>
             <pattern>NIE</pattern>
             <template>
-                Swietnie! W naszym menu bez misa mamy do wyboru: Margherita, Marinara i Vegetariana
+                <random>
+                    <li>Okej,</li>
+                    <li>Dobrze,</li>
+                    <li>Oczywiscie,</li>
+                    <li>Super,</li>
+                </random>
+                w takim razie naszym menu bez miesa mamy do wyboru: Margherita, Marinara i Vegetariana
                 <think>
                     <set name="topic">BEZMIESA</set>
                 </think>
             </template>
         </category>
         <category>
+            <pattern>NIE *</pattern>
+            <template>
+                <srai>NIE</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ NIE *</pattern>
+            <template>
+                <srai>NIE</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ NIE</pattern>
+            <template>
+                <srai>NIE</srai>
+            </template>
+        </category>
+        <category>
             <pattern>TAK</pattern>
             <template>
-                Super, z miesem do wyboru mamy: Capricciosa, Diavola oraz Prosciutto
+                <random>
+                    <li>Okej</li>
+                    <li>Dobrze</li>
+                    <li>Oczywiscie</li>
+                    <li>Super</li>
+                </random>
+                z miesem do wyboru mamy: Capricciosa, Diavola oraz Prosciutto
                 <think>
                     <set name="topic">ZMIESEM</set>
                 </think>
+            </template>
+        </category>
+        <category>
+            <pattern>TAK *</pattern>
+            <template>
+                <srai>TAK</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ TAK *</pattern>
+            <template>
+                <srai>TAK</srai>
+            </template>
+        </category>
+        <category>
+            <pattern>_ TAK</pattern>
+            <template>
+                <srai>TAK</srai>
             </template>
         </category>
         <category>
@@ -119,7 +167,12 @@
         <category>
             <pattern>*</pattern>
             <template>
-                Chyba nie mamy takiego rozmiaru... Bedzie mala, srednia czy duza?
+                <random>
+                    <li>Chyba nie mamy takiego rozmiaru...</li>
+                    <li>Nie wiem co to znaczy "<star index = "1"/>"...</li>
+                    <li>To moze jeszcze raz,</li>
+                </random>
+                Bedzie mala, srednia czy duza?
             </template>
         </category>
     </topic>
